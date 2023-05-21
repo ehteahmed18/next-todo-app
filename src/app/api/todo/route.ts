@@ -27,7 +27,7 @@ export async function POST(request:NextRequest){
     const req = await request.json();
     try{
         if (req.task){
-            const res = db.insert(todoTable).values({
+            const res = await db.insert(todoTable).values({
                 task: req.task
             }).returning();
 

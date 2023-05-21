@@ -3,8 +3,8 @@ import TodoList from "./components/TodoList";
 
 export default function Page(){
     return(
-        <main className="flex justify-center items-center bg-gradient-to-tr from-primary to-secondary h-screen">
-            <div className="w-full max-w-md px-2 py-3 rounded-xl bg-white/40">
+        <main className="flex justify-center items-center bg-gradient-to-tr from-primary to-secondary h-auto">
+            <div className="w-full max-w-md px-2 py-3 rounded-xl my-5 bg-white/40">
                 {/* @ts-ignore */}
                 <TodoList/>
                 <AddTodo/>
