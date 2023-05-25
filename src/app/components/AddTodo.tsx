@@ -22,6 +22,7 @@ export default function AddTodo(){
 
                 console.log(res.ok)
                 refresh()
+                setTask({task: ""})
             }
         }
         catch(err){
@@ -31,8 +32,8 @@ export default function AddTodo(){
 
     return(
         <div>
-            <form className="w-full flex gap-x-1 ">
-                <input onChange={(e) => setTask({task: e.target.value})} className="w-full px-2 py-2 border rounded-full mx-4 focus:outline-secondary" type="text" />
+            <form className="w-full flex  ">
+                <input onChange={(e) => setTask({task: e.target.value})} className="w-full px-4 py-2 border rounded-full mx-4 focus:outline-secondary" type="text" />
                 <button type="button" onClick={handleSubmit} className="shrink-0 mx-4 bg-gradient-to-b from-primary to-secondary rounded-full p-4">
                     <Image src="/Vector.png" alt="vector" width="20" height="20" />
                 </button> 

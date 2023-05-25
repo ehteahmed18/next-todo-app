@@ -2,7 +2,7 @@ import { Todo } from "@/lib/drizzle"
 
 const getData = async () => {
     try {
-        const res = await fetch("http://127.0.0.1:3000/api/todo", {
+        const res = await fetch("http://127.0.0.1:3001/api/todo", {
             method: "GET",
             cache:"no-store",
             headers: {
@@ -29,7 +29,7 @@ export default async function TodoList() {
 
 
     return (
-        <>
+        <div className="max-h-[300px] overflow-auto mb-5 scrollbar scrollbar-w-2 scrollbar-track-rounded-xl scrollbar-track-secondary ">
             {
                 res.data.map((item) => {
                     return (
@@ -43,6 +43,6 @@ export default async function TodoList() {
                 })
             }
 
-        </>
+        </div>
     )
 }
